@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://use.fontawesome.com/your-embed-code.js"></script>
+	<!-- TODO: Place your Font Awesome embed code  -->
+	<link rel="stylesheet" href="a4_dose1.css">
+	<title>1st Dose</title>
+</head>
+
+<body>
+  <div class="main_form">
+    <h2 class="registration_title">Register for your first dose using the form below and book your vaccination</h2>
+
+    <form class="registration_form" name="registration_form_01">
+  <div class="form-row">
+    <div class="form-group col-md-4">
+      <label for="inputFirstName">First Name</label>
+      <input type="name" class="form-control" id="inputFirstName" name="fName">
+			<span id="reqTxtName" class="reqError"></span><br />
+
+    </div>
+    <div class="form-group col-md-4">
+      <label for="inputLastName">Last Name</label>
+      <input type="lastname" class="form-control" id="inputLastName" placeholder="Last Name">
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-4">
+      <label for="inputPhone">Phone Number</label>
+      <input type="Phone" class="form-control" id="inputPhone" placeholder="######1212">
+    </div>
+    <div class="form-group col-md-4">
+      <label for="inputEmail">Email</label>
+      <input type="email" class="form-control" id="inputEmail" placeholder="student@yorku.ca">
+    </div>
+    <div class="form-group col-md-4">
+      <label for="inputDate">Pick your date</label>
+      <input type="datetime-local" class="form-control" id="inputDate" placeholder="Date">
+			<div class="dose1_button"><a href="calendar.html" target="_blank" rel="noopener noreferrer"><input class="btn btn-success btn-block" type="button" value="SEE AVAILABILITY"></a></div>
+    </div>
+    <div class="form-group col-md-4">
+      <label for="inputHealth">Health Card Number (without version code)</label>
+      <input type="number" class="form-control" id="inputHealth" placeholder="#######674">
+    </div>
+  </div>
+	<p> Press <b>CONFIRM</b> to book your appointment and download your confirmation.</p>
+
+
+
+  <div class="regist_actionButton">
+  <button type="submit" class="btn btn-primary registration_submit" onclick="saveFile()">CONFIRM</button>
+	<div type="submit" class="dose4_button" ><a href="a4_landingPage.html"><input class="btn btn-primary" type="button" value="EXIT"></a></div>
+</div>
+</form>
+    </div>
+
+
+
+  </body>
+	<script>
+	    let saveFile = () => {
+
+
+	        // Get the data from each element on the form.
+	    	 var firstName = document.getElementById('inputFirstName');
+	        var lastName = document.getElementById('inputLastName');
+	        var phone = document.getElementById('inputPhone');
+	        var email = document.getElementById('inputEmail');
+					var date = document.getElementById('inputDate');
+	        var healthCard = document.getElementById('inputHealth');
+
+
+  if (firstName.value == "") {
+alert("First Name reqiured");
+    return false;
+  }
+	else if (lastName.value == "") {
+alert("Last Name reqiured");
+    return false;
+  }
+
+	else if (phone.value == "") {
+alert("Phone Number reqiured");
+		return false;
+	}
+	else if (email.value == "") {
+alert("Email address reqiured");
+		return false;
+	}
+	else if (date.value == "") {
+alert("Date reqiured");
+		return false;
+	}
+	else if (healthCard.value == "") {
+alert("Date reqiured");
+		return false;
+	}
+	else {
+		alert("Thank you for keeping the community safe and registering your appointment for Dose 1");
+
+		// This variable stores all the data.
+		let data =
+				'\r First Name: ' + firstName.value + ' \r\n ' +
+				'Last Name: ' +lastName.value + ' \r\n ' +
+				'Phone: ' + phone.value + ' \r\n ' +
+				'Email: ' + email.value + ' \r\n ' +
+				'Date: ' + date.value + ' \r\n ' +
+				'Health Card: ' + healthCard.value;
+
+		// Convert the text to BLOB.
+		const textToBLOB = new Blob([data], { type: 'text/plain' });
+		const sFileName = 'Dose1.txt';	   // The file to save the data.
+
+		let newLink = document.createElement("a");
+		newLink.download = sFileName;
+
+		if (window.webkitURL != null) {
+				newLink.href = window.webkitURL.createObjectURL(textToBLOB);
+		}
+		else {
+				newLink.href = window.URL.createObjectURL(textToBLOB);
+				newLink.style.display = "none";
+				document.body.appendChild(newLink);
+		}
+
+		newLink.click();
+	}
+
+
+	    }
+
+	</script>
+
+  </html>

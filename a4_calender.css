@@ -1,0 +1,138 @@
+html, body{
+  padding: 2%;
+  font-family: 'Open Sans', sans-serif;
+  background: #f7f4ee;
+}
+
+h1 {
+  font: 400 2rem;
+  margin: 0 auto 40px auto;
+  padding: 0;
+  text-align: center;
+  color: #0071BC;;
+  position: relative;
+  z-index: 2;
+}
+h1 span{
+  display:block;
+  font-size: 1rem;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #005f6e;
+}
+h1::before{
+  content:"____";
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+h1::after{
+  content:"____________";
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+.zibpla--calendar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.zibpla--calendar-items {
+   padding: 10px;
+  display: flex;
+}
+.zibpla--calendar-inside{
+   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    background-color: #f8f8f8;
+    padding: 2px;
+}
+
+.ce_availability table{
+  width: 100%;
+  min-width: 210px;
+}
+
+.ce_availability table.month {
+    margin:0;
+    padding: 0 20px;
+}
+
+.ce_availability td.month {
+    text-align: center;
+    background-color: #0071BC;
+    color: #fff;
+    font-size: 1rem;
+    height: 30px !important;
+    width: 100%;
+    line-height: 30px !important;
+}
+
+.ce_availability table  > tbody > tr > td {
+    width: 30px;
+    height: 30px;
+    font-size: 0.875em;
+    z-index: 1;
+    border-radius: 0 !important;
+    text-align: center !important;
+    vertical-align: middle !important;
+    border: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.ce_availability td.day {
+    font-weight: 600;
+    height: 30px !important;
+    background-color: #f2f2f2;
+}
+
+.ce_availability td.n {
+    background-color: #f8f8f8;
+}
+
+.ce_availability td.f {
+    background-color: #ffffff;
+}
+
+.ce_availability td.o {
+    background-color: #b2dfdb;
+}
+
+/* Anreise Dreieck*/
+.ce_availability td.of {
+    position: relative;
+    overflow: hidden;
+}
+
+.ce_availability td.of:after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-bottom: 30px solid #b2dfdb;
+    border-left: 30px solid #ef9a9a;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+}
+
+/*Abreise Dreieck*/
+
+.ce_availability td.fo {
+    position: relative;
+    overflow: hidden;
+}
+
+.ce_availability td.fo:before {
+    content: '';
+    width: 0;
+    height: 0;
+    border-top: 30px solid #b2dfdb;
+    border-right: 30px solid #ef9a9a;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+}

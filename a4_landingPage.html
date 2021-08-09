@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://use.fontawesome.com/your-embed-code.js"></script>
+	<!-- TODO: Place your Font Awesome embed code  -->
+	<script type="text/javascript" src="register.js"></script>
+
+	<link rel="stylesheet" href="a4_landingPage_style.css">
+	<title>Covid Booking Application</title>
+</head>
+
+<body>
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<!-- NavBar -->
+	<div class="navbar">
+		<div class="container">
+			<h1 class="logo">SafeCommunity.</h1>
+			<div class="overflow-hidden">
+				<nav>
+					<ul class="navbar-list">
+						<li><a href="a4_dose1.html" class="text-decoration-none">Dose 1</a>
+						</li>
+						<li><a href="a4_dose2.html" class="text-decoration-none">Dose 2</a>
+						</li>
+						<li><a href="a4_cancellation.html" class="text-decoration-none">Cancel Appointment</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+	<div class="infoCard">
+		<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+			<div class="box-part text-center">
+				<div class="infoCard_title">
+					<h1>INSTRUCTIONS</h1>
+				</div>
+				<div class='nav-brand'>
+					<img src='a4_vacc.png' alt='Official logo' width='80px' height='80px'>
+				</div>
+				<div class="message_text">
+					<h3><span>Help stop the the spread of Covid 19</span></h3>
+          <p>To book your first dose, click <b>DOSE 1</b> button</p>
+          <p>To book your second dose, click <b>DOSE 2</b> button</p>
+          <p>To cancel your current vaccination appointment, click <b>CANCELLATION</b> button</p>
+          <p>To reschedule your current vaccination appointment, click <b>RESCHEDULE</b> button</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+  <div class="buttons_landing">
+    <div class="dose1_button"><a href="a4_dose1.html"><input class="btn btn-primary btn-block" type="button" value="DOSE 1"></a></div>
+  <div class="dose2_button"><a href="a4_dose2.html"><input class="btn btn-primary btn-block" type="button" value="DOSE 2"></a></div>
+	<div class="dose3_button"><a href="a4_cancellation.html"><input class="btn btn-primary btn-block" type="button" value="CANCELLATION"></div>
+		<div class="dose4_button" ><a href="a4_reschedule.html"><input class="btn btn-primary btn-block" type="button" value="RESCHEDULE" onclick="self.close()"></div>
+
+
+
+  </div>
+	<script>
+	function closeWindow() {
+	var myWindow;
+
+	  myWindow.close();
+	}
+	</script>
+</body>
+
+</html>

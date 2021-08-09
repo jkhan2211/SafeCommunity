@@ -1,0 +1,132 @@
+body {
+  font-family: 'Times New Roman', serif;
+  line-height: 1.6;
+  background-color: #0071BC;
+
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+h1,h2 {
+  font-weight: 300;
+  line-height: 1.2;
+  margin: 10px 0;
+}
+
+p {
+  margin: 10px 0;
+}
+.navbar {
+  background-color: #047aed;
+  color: #fff;
+  height: 70px;
+}
+
+.navbar ul {
+  display: flex;
+}
+
+.navbar a {
+  color: #fff;
+  padding: 10px;
+  margin: 0 5px;
+}
+
+.navbar a:hover {
+  border-bottom: 2px #fff solid;
+}
+
+.navbar .flex {
+  justify-content: space-between;
+}
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  overflow: auto;
+  padding: 0 40px;
+}
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.showcase {
+  color: #fff;
+  font-size: 45px;
+}
+
+.square {
+  height: 700px;
+  width: 500px;
+  border-radius: 25px;
+  border: 1px solid black;
+  opacity: 0.6;
+}
+.logo {
+  position: fixed;
+  left: 30px;
+  top: -10px;
+}
+
+.line {
+  margin: 0;
+  border: 1px solid red;
+}
+
+.navbar-list {
+  position: fixed;
+  right: 50px;
+    margin-top: -10px;
+}
+
+.box{
+    padding:60px 0px;
+}
+
+.box-part{
+    background:#FFF;
+    border-radius:0;
+    padding:60px 10px;
+    margin:30px 0px;
+}
+.infoCard_title{
+  background-color: #073F65;
+  color: #fff;
+  position: relative;
+  bottom: 30px;
+  width: 20px 20px;
+  border-style:solid;
+  border: 4px solid black;
+
+}
+.message_text{
+    margin:20px 0px;
+    border-style:solid;
+    border: 4px solid black;
+    border-radius: 25px;
+
+}
+.buttons_landing {
+  margin-left: 945px;
+  margin-top: 90px;
+}
+.btn-primary {
+  border: 4px solid black;
+  margin-top: 10px;
+  padding-top: 10px;
+}
+.btn-primary:hover {
+  border: 3px solid #fff;
+  overflow: hidden;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+
+}

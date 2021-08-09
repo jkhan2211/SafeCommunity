@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://use.fontawesome.com/your-embed-code.js"></script>
+	<!-- TODO: Place your Font Awesome embed code  -->
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	 <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/2.14.1/moment.min.js"></script>
+	 <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js"></script>
+
+ <script type='text/javascript'>
+	 $( document ).ready(function() {
+		 $('#datetimepicker1').datetimepicker();
+	 });
+ </script>
+ <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.min.css">
+	<link rel="stylesheet" href="a4_reschedule.css">
+	<title>Reschedule</title>
+</head>
+
+<body>
+	<h1 class="reschedule_title">Reschedule</h1>
+	<div class="card">
+	<div class="rechedulePannel">
+		<div class="messagePannel">
+
+	<h2> Please pick a date and time to reschedule your vaccination appointment.
+	<h2> Once completed please click confirm. </h2>
+</div>
+<div class="rechedule_form">
+<form class="rechedule_formCreation">
+<p><b>Please Note: A confirmation will be downloaded</b></p>
+                <div class="form-group">
+                   <label class="control-label">Appointment Time</label>
+                   <div class='input-group date' id='datetimepicker1'>
+                      <input type='text' class="form-control" id="inputDate" />
+                      <span class="input-group-addon">
+                      <span class="glyphicon glyphicon-calendar"></span>
+                      </span>
+                   </div>
+
+									 <div class="row">
+		     <div class="col-sm-12 text-center">
+					 <button type="submit" class="btn btn-primary btn-block cancel_submit" onclick="saveFile()">CONFIRM</button>
+					 <div class="exit_button"><a href="a4_landingPage.html"><input id="btnClear" class="btn btn-primary btn-block" type="button" value="EXIT"></a></div>
+		      </div>
+				</div>
+
+</form>
+</div>
+</div>
+</div>
+
+  </body>
+
+	<script>
+	let saveFile = () => {
+		alert("Confirmation of recheduled appointment has been downloaded. Please keep it safe.")
+		var date = document.getElementById('inputDate');
+			let data ='Your appointment has been recheduled to: ' + date.value;
+			// Convert the text to BLOB.
+			const textToBLOB = new Blob([data], { type: 'text/plain' });
+			const sFileName = 'recheduled.txt';	   // The file to save the data.
+
+			let newLink = document.createElement("a");
+			newLink.download = sFileName;
+
+			if (window.webkitURL != null) {
+					newLink.href = window.webkitURL.createObjectURL(textToBLOB);
+			}
+			else {
+					newLink.href = window.URL.createObjectURL(textToBLOB);
+					newLink.style.display = "none";
+					document.body.appendChild(newLink);
+			}
+
+			newLink.click();
+		}
+
+	</script>
+</html>

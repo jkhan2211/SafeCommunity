@@ -1,0 +1,52 @@
+body {
+  font-family: 'Times New Roman', serif;
+  line-height: 1.6;
+  background-color: #0071BC
+
+}
+
+.main_form_2 {
+  background-color: #fff;
+}
+.registration_form_2 {
+  color: #000000;
+  border: 2px solid #000000;
+  font-size: 150%;
+}
+.registration_title_2 {
+  text-align: center;
+  color: #fff;
+  background-color: #073F65;
+}
+
+.regist_actionButton_2 {
+  margin-left: 1000px;
+}
+
+.btn-primary {
+  margin: 25px;
+  border: 2px solid #181A18;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  width: 200px;
+  margin-left: 40px;
+  font-size: 25px;
+}
+.btn-primary:hover {
+  border: 3px solid #000000;
+  overflow: hidden;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+
+}
+
+#inputFirstName,#inputLastName,#inputDate,#inputPhone,#inputEmail,#inputHealth  {
+  border: 3px solid #000000;
+}
+.form-check-label_yes, .form-check-label_no {
+  margin-left: 20px;
+}
